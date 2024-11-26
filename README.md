@@ -1,2 +1,2 @@
 # embedbuilder
-A discord embed builder website. 
+A Discord embed builder website. 
