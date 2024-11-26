@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discord Embed Builder</title>
+    <meta name="description" content="A tool to build Discord embeds.">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Discord Embed Builder</h1>
+        <div class="grid">
+            <div class="card">
+                <form id="embedForm">
+                    <div class="form-group">
+                        <label for="title">Title</label>
+                        <input type="text" id="title" name="title">
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Description</label>
+                        <textarea id="description" name="description" rows="3"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="color">Color</label>
+                        <input type="color" id="color" name="color" value="#5865f2">
+                    </div>
+                    <div class="form-group">
+                        <label for="author">Author</label>
+                        <input type="text" id="author" name="author">
+                    </div>
+                    <div class="form-group">
+                        <label for="thumbnail">Thumbnail URL</label>
+                        <input type="url" id="thumbnail" name="thumbnail">
+                    </div>
+                    <div class="form-group">
+                        <label for="footer">Footer</label>
+                        <input type="text" id="footer" name="footer">
+                    </div>
+                    <div class="form-group">
+                        <label for="timestamp">Timestamp</label>
+                        <input type="datetime-local" 
+                               id="timestamp" 
+                               name="timestamp"
+                               onclick="this.showPicker()">
+                    </div>
+                </form>
+            </div>
+            <div class="card">
+                <div id="preview" class="preview"></div>
+                <button onclick="copyEmbed()">Copy Embed JSON</button>
+            </div>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>

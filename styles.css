@@ -1,0 +1,120 @@
+:root {
+    --bg-primary: #1a1b1e;
+    --bg-secondary: #2f3136;
+    --accent: #5865f2;
+    --text: #ffffff;
+}
+body {
+    margin: 0;
+    font-family: -apple-system, system-ui, sans-serif;
+    background: var(--bg-primary);
+    color: var(--text);
+    min-height: 100vh;
+    padding: 2rem;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
+.card {
+    background: var(--bg-secondary);
+    border-radius: 8px;
+    padding: 1.5rem;
+}
+.form-group {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+.form-group label {
+    margin-bottom: 0.5rem;
+    color: var(--text);
+}
+input, textarea {
+    width: 100%;
+    padding: 0.5rem;
+    background: var(--bg-primary);
+    border: 1px solid #404348;
+    border-radius: 4px;
+    color: var(--text);
+    font-size: 14px;
+    resize: none;
+}
+input[type="color"] {
+    width: 100%;
+    height: 40px;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    -webkit-appearance: none;
+    appearance: none;
+    background: var(--bg-primary);
+}
+
+input[type="color"]::-webkit-color-swatch-wrapper {
+    padding: 0;
+    border-radius: 4px;
+}
+
+input[type="color"]::-webkit-color-swatch {
+    border: none;
+    border-radius: 4px;
+}
+input[type="datetime-local"] {
+    padding: 0.5rem;
+    background: var(--bg-primary);
+    border: 1px solid #404348;
+    border-radius: 4px;
+    color: var(--text);
+    cursor: pointer;
+    width: 100%;
+}
+input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    cursor: pointer;
+    opacity: 0.8;
+}
+input[type="datetime-local"]::-webkit-calendar-picker-indicator:hover {
+    opacity: 1;
+}
+input[type="datetime-local"]::-webkit-datetime-edit {
+    padding: 0;
+}
+input[type="datetime-local"]::-webkit-inner-spin-button {
+    display: none;
+}
+.preview {
+    border-left: 4px solid var(--accent);
+    padding: 0.75rem;
+    background: var(--bg-primary);
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+button {
+    background: var(--accent);
+    color: var(--text);
+    border: none;
+    padding: 0.75rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    width: 100%;
+}
+button:hover {
+    opacity: 0.9;
+}
+h1 {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
